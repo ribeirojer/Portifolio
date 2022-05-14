@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="raiz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/21bbfa7119.js" crossorigin="anonymous"></script>
+    
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Template Main CSS File -->
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="script.js" type="text/javascript"></script>
+    
+    <title>Portifólio Eduardo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a><i class='bx bx-home visualizando'></i><span>Home</span></a></li>
+                <li><a><i class='bx bx-body'></i><span>Resume</span></a></li>
+                <li><a><i class='bx bx-desktop'></i><span>Portfolio</span></a></li>
+                <li><a><i class='bx bx-id-card' ></i><span>Contact</span></a></li>
+                <li><button onclick=myFun()><img id="img-dark-mode" src="assets/lua.png" alt="lua"></button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">        
+            <div>
+                <h1 id="nomeh1">Eduardo Ribeiro</h1>
+                <h2 id="nomeh2">Desenvolvedor Front-end</h2>
+                <div id="redessociais">
+                    <a href="https://www.instagram.com/eduardojer7/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/ribeirojer"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/jos%C3%A9-eduardo-ribeiro-498226227/"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div id="fotoeduardo" class="image-container">
+                <img src="assets/IMG-20220305-WA0010.jpg" alt="imagem de bueno brandao">
+            </div>
+        </section>
+        <section id="primeirasecao">
+            <h1>Linha do tempo da minha vida</h1>
+            <div id="linha">
+                <div class="flex-parent">
+                    <div class="input-flex-container">
+                        <div id="nasci" class="input active">  
+                            <img src="assets/nascimento.png" alt="nascimento">
+                            <span data-year="1994"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/estudante_1.png" alt="jovem sem oculos">
+                            <span data-year="2011"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/estudante_2.png" alt="jovem com oculos">
+                            <span data-year="2012"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/soldado.png" alt="soldado">
+                            <span data-year="2013"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/soldado.png" alt="soldado">
+                            <span data-year="2014"></span>
+                        </div>
+                        <div class="input">                             
+                            <img src="assets/soldado_primeira_classe.png" alt="soldado_primeira_classe">
+                            <span data-year="2016"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/soldado_primeira_classe.png" alt="soldado_primeira_classe">
+                            <span data-year="2017"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/cabo.png" alt="cabo">
+                            <span data-year="2019"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/atual.png" alt="civil">
+                            <span data-year="2021"></span>
+                        </div>
+                        <div class="input">  
+                            <img src="assets/man4.png" alt="civil barbudo">
+                            <span data-year="2022"></span>
+                        </div>
+                    </div>
+                    <div class="description-flex-container">
+                        <p class="active">05/10/1994 às 23:59, nasceu José Eduardo Ribeiro!</p>
+                        <p>Início do curso técnico em eletrônica, no Centro de Educação Profissional Hélio Augusto de Souza (CEPHAS).</p>
+                        <p>Conclusão do curso técnico em eletrônica.<br>Conclusão do ensino médio.</p>
+                        <p>Serviço militar obrigatório.</p>
+                        <p>Engajamento no serviço militar.<br>Auxiliar de serviços gerais no Centro de Preparação de Oficiais da Reserva da Aeronáutica de São José dos Campos(CPORAer-SJ).</p>
+                        <p>Início do curso Bacharelado Interdisciplinar em Ciência e Tecnologia na Universidade Federal de São Paulo (UNIFESP).<br>Promoção a Soldado de Primeira Classe.</p>
+                        <p>Com a promoção a S1 passei a trabalhar no Centro de Computação da Aeronáutica de São José dos Campos (CCA-SJ).</p>
+                        <p>Promoção a Cabo.<br>Passei a trabalhar como auxiliar de manutenção de computadores, no Instituto de Estudos Avançados (IEAv).</p>
+                        <p>Fim do meu tempo como militar.<br>Mudança para Joinville - SC.<br>Trabalho como auxiliar de produção, na Indústria Catarinense de Carroserias (Busscar).</p>
+                        <p>Saída do trabalho na Busscar.<br>Início da minha carreira como desenvolvedor Front-end!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="segundasecao">
+            <h1>Portifólio</h1>
+            
+        </section>
+    </main>
+    <footer>
+        <p>https://www.flaticon.com/authors/victoruler</p>
+        <p>rodapé muito bom com contatos e animações</p>
+    </footer>
+</body>
+</html>
