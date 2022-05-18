@@ -264,9 +264,10 @@ main a:hover {
 /* segunda seção */
 
 #segundasecao {
-    height: 649px;
-    background-image: url(assets/ffflux-claro.svg);
+    height: 100vh;
+    background-image: url(assets/rrrainbow.svg);
     background-size: cover;
+    background-color: var(--cards-bg);
 }
 #segundasecao h1 {
     display: flex;
@@ -279,18 +280,23 @@ main a:hover {
     color: var(--home-color);
 }
 .card {
-    background-color: var(--cards-bg);
     margin: 1rem;
+    padding: 1rem;
     border-radius: 0.5rem;
-    border: solid 1px #aaaaaa;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 25rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .card img {
     width: 100%;
-    height: 8rem;
-    border-radius: 0.5rem 0.5rem 0 0;
+    height: 60%;
+    border-radius: 0.5rem;
 }
 .card h3 {
     display: flex;
@@ -311,13 +317,57 @@ main a:hover {
 /* footer */
 
 footer {
-    background-color: #594E36;
-    height: 649px;
+    background-color: var(--segunda-bg);
+    color: var(--home-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-h6 {
-    color: #2F2504;
-    color: #594E36;
-    color: #73DE04;
-    color: #7E846B;
-    color: #F2A359;
+.skills div {
+    display: flex;
+    justify-content: center;
+}
+footer .skills p {
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+}
+.hardskills i {
+    margin: 0 0.4rem;
+    font-size: 3rem;
+}
+.softskills i {
+    margin: 0 0.8rem;
+    font-size: 2rem;
+}
+footer img {
+    height: 100px;
+}
+.contatos {
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contatos h2 {
+    margin: 1rem 0 0.2rem 0;
+}
+.contatos p {
+    margin: 0.5rem 0 0.2rem 0;
+    font-weight: bold;
+}
+.contatos i {
+    margin: 0 0.4rem;
+    font-size: 3rem;
+}
+.presente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presente img {
+    height: 10rem;
+    animation: spin 5s infinite linear;
 }
