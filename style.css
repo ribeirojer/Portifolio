@@ -25,19 +25,31 @@
     font-family: poppins, sans-serif;
     transition: 0.5s;
 }
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+:target {
+scroll-margin-top: 0;
+}
 header {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    transition: all 0.5s;
-    padding: 15px;
+    padding: 1rem;
     display: flex;
     align-items: center;
     color: var(--home-icones);   
 }
+header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 header li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     list-style-type: none;
 }
 header span {
@@ -48,7 +60,6 @@ header i {
     padding: 1rem;
     border-radius: 30% 70% 70% 30% / 30% 50% 50% 70%;
     border: dashed 2px #2F2504;
-    transition: 0.4s; 
 }
 header i:hover {
     border: solid 2px #2F2504;
@@ -67,7 +78,57 @@ button img {
     height: 2rem;
     padding: 0.5rem;
 }
+#naoexibir {
+    display: none;
+}
 
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+.label {
+    width: 3.5rem;
+    height: 1.5rem;
+    background-color: #111;
+    display: flex;
+    border-radius: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+}
+.ball {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.2rem;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+    transform: translateX(2rem);
+}
+.fa-moon {
+    color: pink;
+    border: none;
+    padding: 0;
+}
+.fa-sun {
+    color: yellow;
+    border: none;
+    padding: 0;
+}
+.fa-sun:hover {
+    border: none;
+}
+.fa-moon:hover {
+    border: none;
+}
 /* main */
 
 /* home */
@@ -83,7 +144,7 @@ h2 {
     font-size: 2rem;
 }
 main section img {
-    height: 649px;
+    height: 100vh;
     position: relative;
 }
 #fotoeduardo {
@@ -134,7 +195,7 @@ main a:hover {
 
 #primeirasecao {
     background-color: var(--segunda-bg);
-    height: 651px;
+    height: 100vh;
     color: var(--home-color);
 }
 #primeirasecao h1 {
@@ -342,8 +403,8 @@ footer .skills p {
     margin: 0 0.8rem;
     font-size: 2rem;
 }
-footer img {
-    height: 100px;
+.skills i:hover {
+    color: var(--home-foto-hover);
 }
 .contatos {
     margin: 0 4rem;
@@ -351,7 +412,12 @@ footer img {
     flex-direction: column;
     align-items: center;
 }
+.contatos img {
+    height: 7rem;
+}
 .contatos h2 {
+    color: #f0f0f0;
+    text-shadow: 1px 1px #594E36;
     margin: 1rem 0 0.2rem 0;
 }
 .contatos p {
@@ -361,6 +427,10 @@ footer img {
 .contatos i {
     margin: 0 0.4rem;
     font-size: 3rem;
+    color: var(--home-color);
+}
+.contatos i:hover {
+    color: var(--home-foto-hover);
 }
 .presente {
     display: flex;
@@ -369,5 +439,12 @@ footer img {
 }
 .presente img {
     height: 10rem;
-    animation: spin 5s infinite linear;
+    animation: spin 10s infinite linear;
+}
+.presente p {
+    font-weight: 500;
+}
+.presente p:nth-child(4) {
+    margin: 0.8rem 0 0 0;
+    font-weight: bold;
 }

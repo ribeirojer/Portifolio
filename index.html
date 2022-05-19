@@ -33,11 +33,19 @@
     <header>
         <nav>
             <ul>
-                <li><a><i class='bx bx-home visualizando'></i><span>Home</span></a></li>
-                <li><a><i class='bx bx-body'></i><span>Resume</span></a></li>
-                <li><a><i class='bx bx-desktop'></i><span>Portfolio</span></a></li>
-                <li><a><i class='bx bx-id-card' ></i><span>Contact</span></a></li>
-                <li><button onclick=myFun()><img id="img-dark-mode" src="assets/lua.png" alt="lua"></button></li>
+                <li><a href="#home"><i class='bx bx-home visualizando'></i><span>Home</span></a></li>
+                <li><a href="#primeirasecao"><i class='bx bx-body'></i><span>Resume</span></a></li>
+                <li><a href="#segundasecao"><i class='bx bx-desktop'></i><span>Portfolio</span></a></li>
+                <li><a href="#footer"><i class='bx bx-id-card' ></i><span>Contact</span></a></li>
+                <li id="naoexibir"><button onclick=myFun()><img id="img-dark-mode" src="assets/lua.png" alt="lua"></button></li>
+                <div>
+                    <input onclick=myFun() type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class='fas fa-sun'></i>
+                    <div class='ball'>
+                    </label>
+                </div>
             </ul>
         </nav>
     </header>
@@ -167,7 +175,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="skills">
             <p>Hard Skills:</p>
             <div class="hardskills">
@@ -183,27 +191,35 @@
             <p>Soft Skills:</p>
             <div class="softskills">
                 <i title="Trabalho em equipe" class="fa-solid fa-people-group"></i>
-                <i title="Disciplina" class="fa-solid fa-person-military-pointing"></i>
+                <i title="Disciplina" class="fa-solid fa-book-open-reader"></i>
                 <i title="Mentalidade de dono" class="fa-solid fa-building-user"></i>
                 <i title="Atenção a detalhes" class="fa-solid fa-glasses"></i>
             </div>
         </div>
         <div class="contatos">
-            <img src="assets/cabo.png" alt="fotorostoeduardo">
+            <img src="assets/man4.png" alt="fotorostoeduardo">
             <h2>Eduardo Ribeiro</h2>
             <h3>Desenvolvedor Front-end</h3>
             <p>Entre em contato: </p>
             <span>
-                <a href="https://www.instagram.com/eduardojer7/"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/jos%C3%A9-eduardo-ribeiro-498226227/"><i class='bx bxl-linkedin'></i></a>
-                <a href="http://"><i class='bx bxl-gmail'></i></a>
+                <a target="_blank" rel="external" href="https://www.instagram.com/eduardojer7/"><i class='bx bxl-instagram'></i></a>
+                <a target="_blank" rel="external" href="https://www.linkedin.com/in/jos%C3%A9-eduardo-ribeiro-498226227/"><i class='bx bxl-linkedin'></i></a>
+                <a target="_blank" rel="external" href="https://api.whatsapp.com/send?phone=5512981580992&text=Olá,%20gostaria%20de%20conversar"><i class="fa-brands fa-whatsapp"></i></a>
             </span>
         </div>
         <div class="presente">
-            <img src="assets/ccchaos.svg" alt="espiral girando">
-            <p>Obrigado pela visita!<br>Veja essa animação como presente [o]</p>
+            <img src="assets/tttwinkle.svg" alt="espiral girando">
+            <p>Veja essa animação como presente 🙌</p>
+            <p>Obrigado pela visita!</p>
             <p>Créditos:</p>
-            <p>https://www.flaticon.com/authors/victoruler</p>
+            <p>imagens: 
+                <a href="https://www.flaticon.com/authors/victoruler" target="_blank">flaticon</a> e 
+                <a href="https://fffuel.co/" target="_blank">fffuel</a>.
+            </p>
+            <p>Ícones:
+                <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> e 
+                <a href="https://boxicons.com/" target="_blank">Boxicons</a>.
+            </p>
         </div>
     </footer>
 </body>
