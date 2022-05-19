@@ -59,14 +59,15 @@ header i {
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 30% 70% 70% 30% / 30% 50% 50% 70%;
-    border: dashed 2px #2F2504;
+    border: dashed 2px var(--home-color);
+    color: var(--home-color);
 }
 header i:hover {
-    border: solid 2px #2F2504;
+    border: solid 2px var(--home-color);
 }
 .visualizando {
     background-color: #2F2504;
-    color: #ffffff;
+    color: var(--home-icones);
     border: dashed 2px #2F2504;
 }
 button {
@@ -108,8 +109,6 @@ button img {
     border-radius: 50%;
     transition: transform 0.2s linear;
 }
-
-/*  target the elemenent after the label*/
 .checkbox:checked + .label .ball{
     transform: translateX(2rem);
 }
@@ -129,6 +128,7 @@ button img {
 .fa-moon:hover {
     border: none;
 }
+
 /* main */
 
 /* home */
@@ -181,7 +181,6 @@ main a:link, main a:visited, main a:active {
 main a:hover {
     color: var(--home-icones)
 }
-
 #home {
     display: flex;
     align-content: center;
@@ -328,6 +327,7 @@ main a:hover {
     height: 100vh;
     background-image: url(assets/rrrainbow.svg);
     background-size: cover;
+    background-attachment: fixed;
     background-color: var(--cards-bg);
 }
 #segundasecao h1 {
@@ -356,23 +356,52 @@ main a:hover {
 }
 .card img {
     width: 100%;
-    height: 60%;
+    height: 90%;
     border-radius: 0.5rem;
 }
 .card h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem;
+    margin: 0.5rem 0 0 0;
 }
 .card p {
     margin: 0 0.8rem;
 }
+.card i:hover {
+    color: var(--home-icones);
+}
 .card div {
     margin: 0.8rem;
+    display: none;
 }
 .card div p {
     margin: 0;
+}
+.card:hover img , .card:hover .titulo-card {
+    animation: fade-out 0.5s ease-out both;
+}
+.card:hover div {
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* footer */
