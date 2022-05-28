@@ -188,6 +188,7 @@ main a:hover {
     justify-content: center;
     background-color: var(--home-bg);
     background-image: url(assets/ssscribble.svg);
+    background-attachment: fixed;
 }
 
 /* primeira seção */
@@ -336,7 +337,8 @@ main a:hover {
     color: var(--home-color);
 }
 .cards {
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
     padding: 0 6rem;    
     color: var(--home-color);
 }
@@ -441,6 +443,11 @@ footer .skills p {
 .contatos img {
     height: 7rem;
 }
+.contatos div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .contatos h2 {
     color: #f0f0f0;
     text-shadow: 1px 1px #594E36;
@@ -463,6 +470,14 @@ footer .skills p {
     flex-direction: column;
     align-items: center;
 }
+.presente1, .presente2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presente1 {
+    margin-bottom: 1rem;
+}
 .presente img {
     height: 10rem;
     animation: spin 10s infinite linear;
@@ -484,6 +499,9 @@ footer .skills p {
     }
     #fotoeduardo {
         left: 4rem;
+    }
+    .description-flex-container {
+        margin: 4rem 0 0 2rem;
     }
     .contatos {
         margin: 0 2rem;
@@ -520,7 +538,7 @@ footer .skills p {
 }
 @media (max-width: 768px) {
     #fotoeduardo {
-        right: 3rem;
+        left: 9rem;
     }
     #home h1 {
         position: absolute;
@@ -551,6 +569,10 @@ footer .skills p {
     }
     .description-flex-container {
         margin: 3rem 0 0 6rem;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
     }
     footer {
         flex-direction: column;
@@ -602,4 +624,57 @@ footer .skills p {
 	.description-flex-container {
 	  margin-top: 30px;
 	  text-align: center; }
+}
+@media (max-width: 425px) {
+    header {
+        display: none;
+    }
+    #fotoeduardo {
+        left: unset;
+        width: 100vw;
+    }
+    #fotoeduardo img {
+        width: 100%;
+    }
+    #home h1 {
+        font-size: 2rem;
+        left: 4rem;
+        top: 359px;
+    }
+    #home h2 {
+    left: 2.5rem;
+    top: 428px;
+    }
+    #redessociais {
+        left: 136px;
+        top: 484px;
+        padding: 12px 0px 8px 12px;
+    }
+    #primeirasecao h1 {
+        font-size: 1.4rem;
+    }
+    #linha {
+        padding: 0;
+    }
+    .input.active img {
+        right: 0.6rem;
+    }
+    .input-flex-container {
+        margin-top: unset;
+    }
+    .input {
+        margin: 106px 10px 0px;
+    }
+    .description-flex-container {
+        margin: 3rem 0 0 0;
+        text-align: initial;
+    }
+    .card {
+        margin: 1rem 0rem;
+        width: 80vw;
+    }
+    .skills {
+        justify-content: center;
+        align-items: center;
+    }
 }
