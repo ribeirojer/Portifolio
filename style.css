@@ -677,4 +677,24 @@ footer .skills p {
         justify-content: center;
         align-items: center;
     }
+    footer .skills p {
+        width: 80vw;
+    }
+    footer .contatos  {
+        margin: 3rem 0;
+    }
+}
+@media (max-width: 425px) {
+    #home h1 {
+        left: 2rem;
+    }
+    #home h2 {
+        left: 0.8rem;
+    }
+    #redessociais {
+        left: 106px;
+    }
+    .description-flex-container {
+        font-size: 1rem;
+    }
 }
