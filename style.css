@@ -31,7 +31,7 @@
     }
 }
 :target {
-scroll-margin-top: 0;
+    scroll-margin-top: 0;
 }
 header {
     position: fixed;
@@ -70,12 +70,12 @@ header i:hover {
     color: var(--home-icones);
     border: dashed 2px #2F2504;
 }
-button {
+header button {
     border-radius: 0.8rem;
     border: dashed 2px #594E36;
     background-color: transparent;
 }
-button img {    
+header button img {    
     height: 2rem;
     padding: 0.5rem;
 }
@@ -330,6 +330,10 @@ main a:hover {
     background-size: cover;
     background-attachment: fixed;
     background-color: var(--cards-bg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #segundasecao h1 {
     display: flex;
@@ -347,8 +351,8 @@ main a:hover {
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 25rem;
-    height: 15rem;
+    width: 27rem;
+    height: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -697,4 +701,19 @@ footer .skills p {
     .description-flex-container {
         font-size: 1rem;
     }
+}
+.botao {
+    background-color: var(--home-color);
+    padding: 0.5rem 1rem;
+    margin: 2rem 1rem 0 0;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+}
+.botao:hover {
+    background-color: var(--home-foto-hover);
+}
+.displayNone {
+    display: none;
 }
