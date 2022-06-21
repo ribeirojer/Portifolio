@@ -37,7 +37,7 @@
                 <li><a href="#primeirasecao"><i class='bx bx-body'></i><span>Resume</span></a></li>
                 <li><a href="#segundasecao"><i class='bx bx-desktop'></i><span>Portfolio</span></a></li>
                 <li><a href="#footer"><i class='bx bx-id-card' ></i><span>Contact</span></a></li>
-                <li id="naoexibir"><button onclick=myFun()><img id="img-dark-mode" src="assets/lua.png" alt="lua"></button></li>
+                <li style="display: none;"><button onclick=myFun()><img id="img-dark-mode" src="assets/lua.png" alt="lua"></button></li>
                 <div>
                     <input onclick=myFun() type="checkbox" class="checkbox" id="checkbox">
                     <label for="checkbox" class="label">
@@ -55,9 +55,9 @@
                 <h1 id="nomeh1">Eduardo Ribeiro</h1>
                 <h2 id="nomeh2">Desenvolvedor Front-end</h2>
                 <div id="redessociais">
-                    <a href="https://www.instagram.com/eduardojer7/"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://github.com/ribeirojer"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/jos%C3%A9-eduardo-ribeiro-498226227/"><i class='bx bxl-linkedin'></i></a>
+                    <a target="_blank" href="https://www.instagram.com/eduardojer7/"><i class='bx bxl-instagram'></i></a>
+                    <a target="_blank" href="https://github.com/ribeirojer"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jos%C3%A9-eduardo-ribeiro-498226227/"><i class='bx bxl-linkedin'></i></a>
                 </div>
             </div>
             <div id="fotoeduardo" class="image-container">
@@ -131,47 +131,59 @@
                 <div id="card-okay" class="card">
                     <img src="assets/imagem-okay-movelaria.png" alt="okaymovelaria">
                     <h3 class="titulo-card">Okay Movelaria</h3>
-                    <div>
-                        <h3>Okay Movelaria</h3>
-                        <p>Site desenvolvido para uma empresa de design de interiores, localizada em Jacareí-SP.</p>
-                        <p class="separadordocard">Tecnologias utilizadas:</p>
-                        <i title="HTML 5" class='bx bxl-html5' ></i>
-                        <i title="CSS 3" class='bx bxl-css3' ></i>
-                        <i title="Javascript" class='bx bxl-javascript' ></i>
-                        <p>Acesse:</p>
-                        <a href="https://okaymovelaria.com" target="_blank"><i title="link" class='bx bx-link'></i></a>
-                        <a href="https://github.com/ribeirojer/OkayMovelaria" target="_blank"><i title="Github" class='bx bxl-github'></i></a>
+                    <div class="card-interno">
+                        <div>
+                            <h3>Okay Movelaria</h3>
+                            <p>Site desenvolvido para uma empresa de design de interiores, localizada em Jacareí-SP.</p>
+                        </div>
+                        <div>
+                            <p class="separadordocard">Tecnologias utilizadas:</p>
+                            <i title="HTML 5" class='bx bxl-html5' ></i>
+                            <i title="CSS 3" class='bx bxl-css3' ></i>
+                            <i title="Javascript" class='bx bxl-javascript' ></i>
+                            <p>Acesse:</p>
+                            <a href="https://okaymovelaria.com" target="_blank"><i title="link" class='bx bx-link'></i></a>
+                            <a href="https://github.com/ribeirojer/OkayMovelaria" target="_blank"><i title="Github" class='bx bxl-github'></i></a>
+                        </div>
                     </div>
                 </div>
                 <div id="card-wissen" class="card displayNone">
                     <img src="assets/imagem-wissen.png" alt="okaymovelaria">
                     <h3 class="titulo-card">Wissen</h3>
-                    <div>
-                        <h3>Wissen</h3>
-                        <p class="textowissen">Círculo de áreas do conhecimento, contém um easter egg! site inspirado no <a target="_blanck" href="https://www.youtube.com/watch?v=ohyai6GIRZg&ab_channel=DomainofScience">vídeo</a> do canal: Domain of Sciense no youtube.</p>
-                        <p>Tecnologias utilizadas:</p>
-                        <i title="HTML 5" class='bx bxl-html5' ></i>
-                        <i title="CSS 3" class='bx bxl-css3' ></i>
-                        <i title="Javascript" class='bx bxl-javascript' ></i>
-                        <p>Acesse:</p>
-                        <a href="Wissen/index.html" target="_blank"><i title="link" class='bx bx-link'></i></a>
-                        <a href="https://github.com/ribeirojer/Wissen" target="_blank"><i title="Github" class='bx bxl-github'></i></a>
+                    <div class="card-interno">
+                        <div>
+                            <h3>Wissen</h3>
+                            <p class="textowissen">Círculo de áreas do conhecimento, contém um easter egg! site inspirado no <a target="_blanck" href="https://www.youtube.com/watch?v=ohyai6GIRZg&ab_channel=DomainofScience">vídeo</a> do canal: Domain of Sciense no youtube.</p>
+                        </div>
+                        <div>
+                            <p>Tecnologias utilizadas:</p>
+                            <i title="HTML 5" class='bx bxl-html5' ></i>
+                            <i title="CSS 3" class='bx bxl-css3' ></i>
+                            <i title="Javascript" class='bx bxl-javascript' ></i>
+                            <p>Acesse:</p>
+                            <a href="Wissen/index.html" target="_blank"><i title="link" class='bx bx-link'></i></a>
+                            <a href="https://github.com/ribeirojer/Wissen" target="_blank"><i title="Github" class='bx bxl-github'></i></a>
+                        </div>
                     </div>
                 </div>
                 <div id="card-fezoque" class="card displayNone">
                     <img src="assets/imagem-fez-oque.png" alt="okaymovelaria">
                     <h3 class="titulo-card">Fez Oque?</h3>
-                    <div>
-                        <h3>Fez Oque?</h3>
-                        <p>Obtenha informações sobre um deputado federal ou uma lista de deputados de cada partido. Projeto pessoal que fiz para aprender a acessar uma API.</p>
-                        <p>Tecnologias utilizadas:</p>
-                        <i title="HTML 5" class='bx bxl-html5' ></i>
-                        <i title="CSS 3" class='bx bxl-css3' ></i>
-                        <i title="Javascript" class='bx bxl-javascript' ></i>
-                        <i title="Tailwind CSS" class='bx bxl-tailwind-css' ></i>
-                        <p>Acesse:</p>
-                        <a href="FezOque/index.html" target="_blank"><i title="link" class='bx bx-link'></i></a>
-                        <a href="https://github.com/ribeirojer/FezOque" target="_blank"><i title="Github" class='bx bxl-github'></i></a>
+                    <div class="card-interno">
+                        <div>
+                            <h3>Fez Oque?</h3>
+                            <p>Obtenha informações sobre um deputado federal ou uma lista de deputados de cada partido. Projeto pessoal que fiz para aprender a acessar uma API.</p>
+                        </div>
+                        <div>
+                            <p>Tecnologias utilizadas:</p>
+                            <i title="HTML 5" class='bx bxl-html5' ></i>
+                            <i title="CSS 3" class='bx bxl-css3' ></i>
+                            <i title="Javascript" class='bx bxl-javascript' ></i>
+                            <i title="Tailwind CSS" class='bx bxl-tailwind-css' ></i>
+                            <p>Acesse:</p>
+                            <a href="FezOque/index.html" target="_blank"><i title="link" class='bx bx-link'></i></a>
+                            <a href="https://github.com/ribeirojer/FezOque" target="_blank"><i title="Github" class='bx bxl-github'></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
