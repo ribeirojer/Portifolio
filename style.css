@@ -405,6 +405,24 @@ main a:hover {
         opacity: 0;
     }
 }
+.botao {
+    background-color: var(--home-color);
+    padding: 0.5rem 1rem;
+    margin: 2rem 1rem 0 0;
+    border-radius: 71% 29% 28% 72% / 45% 38% 62% 55%;
+    border: 2px solid var(--cards-bg);
+    color: #ffffff;
+    cursor: pointer;
+}
+.botao:hover {
+    background-color: var(--home-foto-hover);
+}
+.botao:focus {
+    outline: 2px solid var(--home-color);
+  }
+.displayNone {
+    display: none;
+}
 
 /* footer */
 
@@ -573,6 +591,9 @@ footer .skills p {
     .description-flex-container {
         margin: 3rem 0 0 6rem;
     }
+    #segundasecao {
+        justify-content: center;
+    }
     .cards {
         flex-direction: column;
         align-items: center;
@@ -597,36 +618,36 @@ footer .skills p {
 }
 @media (max-width: 600px) {
 	.flex-parent {
-	  justify-content: initial; }
+	    justify-content: initial; }
 	.input-flex-container {
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  width: 100%;
-	  height: auto;
-	  margin-top: 15vh; }
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 15vh; }
 	.input {
-	  width: 60px;
-	  height: 60px;
-	  margin: 0 10px 50px;
-	  background-color: #AEB6BF; }
-	  .input::before, .input::after {
-		content: none; }
-	  .input span {
-		width: 100%;
-		height: 100%;
-		display: block; }
-		.input span::before {
-		  top: calc(100% + 5px);
-		  transform: translateX(-50%);
-		  text-indent: 0;
-		  text-align: center; }
-		.input span::after {
-		  top: 50%;
-		  transform: translate(-50%, -50%);
-		  color: #ECF0F1; }
+        width: 60px;
+        height: 60px;
+        margin: 0 10px 50px;
+        background-color: #AEB6BF; }
+    .input::before, .input::after {
+        content: none; }
+    .input span {
+        width: 100%;
+        height: 100%;
+        display: block; }
+    .input span::before {
+        top: calc(100% + 5px);
+        transform: translateX(-50%);
+        text-indent: 0;
+        text-align: center; }
+    .input span::after {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #ECF0F1; }
 	.description-flex-container {
-	  margin-top: 30px;
-	  text-align: center; }
+        margin-top: 30px;
+        text-align: center; }
 }
 @media (max-width: 425px) {
     header {
@@ -640,17 +661,17 @@ footer .skills p {
         width: 100%;
     }
     #home h1 {
-        font-size: 2rem;
-        left: 4rem;
         top: 359px;
+        left: 10vw;
+        font-size: 2rem;
     }
     #home h2 {
-    left: 2.5rem;
-    top: 428px;
+        top: 428px;
+        left: 5vw;
     }
     #redessociais {
-        left: 136px;
         top: 484px;
+        left: 25vw;
         padding: 12px 0px 8px 12px;
     }
     #primeirasecao h1 {
@@ -666,11 +687,12 @@ footer .skills p {
         margin-top: unset;
     }
     .input {
-        margin: 106px 10px 0px;
+        margin: 106px 8px 0px;
     }
     .description-flex-container {
         margin: 3rem 0 0 0;
         text-align: initial;
+        font-size: 1rem;
     }
     .card {
         margin: 1rem 0rem;
@@ -687,32 +709,52 @@ footer .skills p {
         margin: 3rem 0;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 375px) {
     #home h1 {
-        left: 2rem;
+        font-size: 1.3rem;
     }
     #home h2 {
-        left: 0.8rem;
+        font-size: 1.1rem;
     }
     #redessociais {
-        left: 106px;
+        left: 20vw;
     }
-    .description-flex-container {
-        font-size: 1rem;
+    main #home i {
+        font-size: 2rem;
+    }
+    .input {
+        width: 50px;
+        height: 50px;
+    }
+    footer .skills p {
+        font-size: 1.3rem;
+        margin: 0.2rem;
+    }
+    .hardskills i, .softskills i {
+        font-size: 2rem;
+    }
+    .presente img {
+        height: 8rem;
+    }
+    .presente p {
+        font-size: 0.8rem;
     }
 }
-.botao {
-    background-color: var(--home-color);
-    padding: 0.5rem 1rem;
-    margin: 2rem 1rem 0 0;
-    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    cursor: pointer;
-}
-.botao:hover {
-    background-color: var(--home-foto-hover);
-}
-.displayNone {
-    display: none;
+@media (max-width: 329px) {
+    .input {
+        width: 40px;
+        height: 40px;
+    }
+    #primeirasecao h1 {
+        font-size: 1.1rem;
+    }
+    .input span::after {
+        font-size: 0.8rem;
+    }
+    .input.active img {
+        right: 1.3rem;
+    }
+    #contatos h3 {
+        font-size: 0.8rem;
+    }
 }
