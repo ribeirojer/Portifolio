@@ -1,21 +1,22 @@
-import React from 'react'
+import Imagem01 from '../assets/nascimento.png'
+"assets/imagem-okay-movelaria.png"
+"assets/imagem-wissen.png"
+"assets/imagem-fez-oque.png"
+
 import styled from 'styled-components';
 
 type Props = {}
 
 const Wrapper = styled.header`
-    #segundasecao {
-        height: 100vh;
-        background-image: url(assets/rrrainbow.svg);
-        background-size: cover;
-        background-attachment: fixed;
-        background-color: var(--cards-bg);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #segundasecao h1 {
+    height: 100vh;
+    color: ${props => props.theme ? "yellow" : "blue"};//var(--cards-bg);
+    background-color: ${props => props.theme ? "green" : "grey"};//url(assets/rrrainbow.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
         display: flex;
         justify-content: center;
         color: var(--home-color);
@@ -111,16 +112,16 @@ const Wrapper = styled.header`
 
 const Projects = (props: Props) => {
     
-    function selecionaCard(id: any): React.MouseEventHandler<HTMLButtonElement> | undefined {
-        throw new Error('Function not implemented.');
+    function selecionaCard(id: any) {
+        console.log(id);
     }
 
     return (
-        <section id="segundasecao">
+        <Wrapper id="segundasecao">
             <h1>Portifólio</h1>
             <div className="cards">
                 <div id="card-okay" className="card">
-                    <img src="assets/imagem-okay-movelaria.png" alt="okaymovelaria"/>
+                    <img src={Imagem01} alt="okaymovelaria"/>
                     <h3 className="titulo-card">Okay Movelaria</h3>
                     <div className="card-interno">
                         <div>
@@ -139,7 +140,7 @@ const Projects = (props: Props) => {
                     </div>
                 </div>
                 <div id="card-wissen" className="card displayNone">
-                    <img src="assets/imagem-wissen.png" alt="okaymovelaria"/>
+                    <img src={Imagem01} alt="okaymovelaria"/>
                     <h3 className="titulo-card">Wissen</h3>
                     <div className="card-interno">
                         <div>
@@ -158,7 +159,7 @@ const Projects = (props: Props) => {
                     </div>
                 </div>
                 <div id="card-fezoque" className="card displayNone">
-                    <img src="assets/imagem-fez-oque.png" alt="imagem-fezoque?"/>
+                    <img src={Imagem01} alt="imagem-fezoque?"/>
                     <h3 className="titulo-card">Fez Oque?</h3>
                     <div className="card-interno">
                         <div>
@@ -179,11 +180,11 @@ const Projects = (props: Props) => {
                 </div>
             </div>
             <div>
-                <button onClick={selecionaCard("btn-1")} id="btn-1" className="botao">1</button>
-                <button onClick={selecionaCard("btn-2")} id="btn-2" className="botao">2</button>
-                <button onClick={selecionaCard("btn-3")} id="btn-3" className="botao">3</button>
+                <button onClick={()=>selecionaCard("btn-1")} id="btn-1" className="botao">1</button>
+                <button onClick={()=>selecionaCard("btn-2")} id="btn-2" className="botao">2</button>
+                <button onClick={()=>selecionaCard("btn-3")} id="btn-3" className="botao">3</button>
             </div>
-        </section>
+        </Wrapper>
     )
 }
 

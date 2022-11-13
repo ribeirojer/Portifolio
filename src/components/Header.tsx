@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import reactLogo from './assets/react.svg'
 
 const Wrapper = styled.nav`
     position: fixed;

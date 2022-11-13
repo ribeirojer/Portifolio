@@ -3,20 +3,18 @@ import styled from 'styled-components';
 
 type Props = {}
 
-const Wrapper = styled.header`
-    footer {
-        background-color: var(--segunda-bg);
-        color: var(--home-color);
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+const Wrapper = styled.footer`
+    background-color: var(--segunda-bg);
+    color: var(--home-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .skills div {
         display: flex;
         justify-content: center;
     }
-    footer .skills p {
+    .skills p {
         display: flex;
         justify-content: center;
         margin: 0.8rem 0;
@@ -92,7 +90,7 @@ const Wrapper = styled.header`
 
 const Footer = (props: Props) => {
   return (
-    <footer id="footer">
+    <Wrapper id="footer">
         <div className="skills">
             <p>Hard Skills:</p>
             <div className="hardskills">
@@ -144,7 +142,7 @@ const Footer = (props: Props) => {
                 </p>
             </div>
         </div>
-    </footer>
+    </Wrapper>
   )
 }
 
