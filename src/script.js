@@ -1,18 +1,3 @@
-function myFun() {
-            
-    var ob = document.getElementById("raiz");
-    var imagebutton = document.getElementById("img-dark-mode");
-    
-    if(ob.classList.contains("dark-mode")) {
-        imagebutton.src = 'assets/lua.png';
-        ob.classList.remove("dark-mode");
-    }
-    else{
-        imagebutton.src = 'assets/sol.png';
-        ob.classList.add("dark-mode");
-    }
-}
-
 $(function(){
 	var inputs = $('.input');
 	var paras = $('.description-flex-container').find('p');

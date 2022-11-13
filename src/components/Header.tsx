@@ -9,8 +9,6 @@ const Wrapper = styled.nav`
     padding: 1rem;
     display: flex;
     align-items: center;
-    color: var(--home-icones); 
-
     ul {
         display: flex;
         flex-direction: column;
@@ -24,25 +22,16 @@ const Wrapper = styled.nav`
         font-size: 1.5rem;
         padding: 1rem;
         border-radius: 30% 70% 70% 30% / 30% 50% 50% 70%;
-        border: dashed 2px var(--home-color);
-        color: var(--home-color);
+        border: dashed 2px ${props => props.theme.mainTextColor};
+        color: ${props => props.theme.mainTextColor};
     }
-    i:hover {
-        border: solid 2px var(--home-color);
+    li i:hover {
+        border: solid 2px ${props => props.theme.mainTextColor};
     }
     .visualizando {
-        background-color: #2F2504;
-        color: var(--home-icones);
-        border: dashed 2px #2F2504;
-    }
-    button {
-        border-radius: 0.8rem;
-        border: dashed 2px #594E36;
-        background-color: transparent;
-    }
-    button img {    
-        height: 2rem;
-        padding: 0.5rem;
+        background-color: ${props => props.theme.mainTextColor};
+        color: ${props => props.theme.mainBg};
+        border: dashed 2px ${props => props.theme.mainTextColor};
     }
     .checkbox {
         opacity: 0;
@@ -83,24 +72,14 @@ const Wrapper = styled.nav`
         border: none;
         padding: 0;
     }
-    .fa-sun:hover {
-        border: none;
-    }
-    .fa-moon:hover {
-        border: none;
-    }
 `;
 
 type Props = {}
 
-const Header = (props: Props) => {
+const Header = ({theme, change}: any) => {
     
-    function myFun(): React.MouseEventHandler<HTMLInputElement> | undefined {
-        throw new Error('Function not implemented.');
-    }
-
     return (
-        <Wrapper>
+        <Wrapper theme={theme}>
             <ul>
                 <li>
                     <a href="#home">
@@ -112,18 +91,22 @@ const Header = (props: Props) => {
                         <i className='bx bx-body'></i>
                     </a>
                 </li>
-                <li><a href="#segundasecao">
-                    <i className='bx bx-desktop'></i>
-                    </a></li>
-                <li><a href="#footer">
-                    <i className='bx bx-id-card' ></i>
-                    </a></li>
+                <li>
+                    <a href="#segundasecao">
+                        <i className='bx bx-desktop'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#footer">
+                        <i className='bx bx-id-card' ></i>
+                    </a>
+                </li>
                 <div>
-                    <input onClick={myFun} type="checkbox" className="checkbox" id="checkbox"></input>
+                    <input onClick={change} type="checkbox" className="checkbox" id="checkbox"></input>
                     <label htmlFor="checkbox" className="label">
-                    <i className="fas fa-moon"></i>
-                    <i className='fas fa-sun'></i>
-                    <div className='ball'></div>
+                        <i className="fas fa-moon"></i>
+                        <i className='fas fa-sun'></i>
+                        <div className='ball'></div>
                     </label>
                 </div>
             </ul>

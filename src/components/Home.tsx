@@ -1,4 +1,6 @@
-import Foto from '../assets/IMG-20220305-WA0010.jpg'
+import photo from '../assets/IMG-20220305-WA0010.jpg'
+import background from '../assets/ssscribble.svg'
+
 import styled from 'styled-components';
 
 type Props = {}
@@ -7,44 +9,46 @@ const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme ? "green" : "grey"};
-  color: ${props => props.theme ? "yellow" : "blue"};
-
+  color: ${props => props.theme.mainTextColor};
+  background: url(${background});
+  background-color: ${props => props.theme.mainBg};
   h1 {
+    font-family: 'Poppins';
     font-size: 4rem;
     line-height: 4.8rem;
-    color: var(--home-color);
-    background-color: var(--home-nome);
+    font-weight: 700;
+    background-color: ${props => props.theme.textHomeBg};
+    padding-left: 0.5rem;
   }
   h2 {
     font-size: 2rem;
     line-height: 2.4rem;
-    color: var(--home-color);
-    background-color: var(--home-nome);
+    font-weight: 500;
     padding-bottom: 0.5rem;
-  }
-  a {
-    margin: 0 1rem 0 0;
+    background-color: ${props => props.theme.textHomeBg};
+    padding-left: 0.5rem;
   }
   a:link, a:visited, a:active {
-    color: var(--home-color);
+    color: ${props => props.theme.mainTextColor};
   }
   a:hover {
-    color: var(--home-icones)
+    color: ${props => props.theme.iconsHover};
   }
   i {
+    padding: 0.5rem;
+    margin: 0 0.5rem 0 0;
+    background-color: ${props => props.theme.textHomeBg};
     font-size: 3rem;
-  }
-  
+  }  
   .image-container {
     position: relative;
     left: 133px;
     display: inline-block;
     line-height: 0;
-    background-color: ${props => props.theme ? "grey" : "blue"};
+    background-color: ${props => props.theme.homefoto};
   }
   .image-container:hover {
-    background-color: ${props => props.theme ? "blue" : "grey"};
+    background-color: ${props => props.theme.mainBg};
   }
   .image-container > img {
     filter:  brightness(70%) contrast(100%) saturate(100%) sepia(0%);
@@ -55,9 +59,10 @@ const Wrapper = styled.section`
   }
 `;
 
-const Home = (props: Props) => {
+const Home = ({theme}: any) => {
+
   return (
-    <Wrapper theme={false}>        
+    <Wrapper theme={theme}>
         <div>
             <h1>Eduardo Ribeiro</h1>
             <h2>Desenvolvedor Front-end</h2>
@@ -68,7 +73,7 @@ const Home = (props: Props) => {
             </div>
         </div>
         <div className="image-container">
-            <img src={Foto} alt="imagem de bueno brandao"/>
+            <img src={photo} alt="imagem de bueno brandao"/>
         </div>
     </Wrapper>
   )

@@ -21,3 +21,251 @@
 :target {
     scroll-margin-top: 0;
 }
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    #fotoeduardo {
+        left: 4rem;
+    }
+    .description-flex-container {
+        margin: 4rem 0 0 2rem;
+    }
+    .contatos {
+        margin: 0 2rem;
+    }
+    .softskills {
+        flex-wrap: wrap;
+        max-width: 150px;
+        margin: auto;
+    }
+    .ball {
+        top: 0.25rem;
+    }
+    .separadordocard {
+        margin: 0;
+    }
+    .textowissen {
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 850px) {
+	.input {
+	  width: 18px;
+	  height: 18px;
+    }
+	.input::before, .input::after {
+		height: 4px;
+    }
+	.input::before {
+		left: calc(-4vw + 5.5px);
+    }
+	.input::after {
+	    right: calc(-4vw + 5.5px);
+    } 
+}
+@media (max-width: 768px) {
+    #fotoeduardo {
+        left: 9rem;
+    }
+    #home h1 {
+        position: absolute;
+        z-index: 1;
+        left: 130px;
+        top: 312px;
+        border-radius: 9px;
+        padding: 0.5rem 1.5rem;
+    }
+    #home h2 {
+        position: absolute;
+        z-index: 1;
+        left: 140px;
+        top: 400px;
+        padding: 0.5rem 1rem;
+        border-radius: 9px;
+    }
+    #redessociais {
+        position: absolute;
+        left: 150px;
+        z-index: 1;
+        top: 450px;
+        border-radius: 10px;
+        padding: 12px 3px;
+    }
+    .input-flex-container {
+        max-width: 560px;
+    }
+    .description-flex-container {
+        margin: 3rem 0 0 6rem;
+    }
+    #segundasecao {
+        justify-content: center;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .skills {
+        display: flex;
+        max-width: 504px;
+        flex-wrap: wrap;
+    }
+    .softskills {
+        flex-wrap: nowrap;
+        max-width: none;
+        margin: 10px 0 0 1rem;
+    }
+    .contatos {
+        flex-direction: row-reverse;
+    }
+
+}
+@media (max-width: 600px) {
+	.flex-parent {
+	    justify-content: initial; }
+	.input-flex-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 15vh; }
+	.input {
+        width: 60px;
+        height: 60px;
+        margin: 0 10px 50px;
+        background-color: #AEB6BF; }
+    .input::before, .input::after {
+        content: none; }
+    .input span {
+        width: 100%;
+        height: 100%;
+        display: block; }
+    .input span::before {
+        top: calc(100% + 5px);
+        transform: translateX(-50%);
+        text-indent: 0;
+        text-align: center; }
+    .input span::after {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #ECF0F1; }
+	.description-flex-container {
+        margin-top: 30px;
+        text-align: center; }
+}
+@media (max-width: 425px) {
+    header {
+        display: none;
+    }
+    #fotoeduardo {
+        left: unset;
+        width: 100vw;
+    }
+    #fotoeduardo img {
+        width: 100%;
+    }
+    #home h1 {
+        top: 359px;
+        left: 10vw;
+        font-size: 2rem;
+    }
+    #home h2 {
+        top: 428px;
+        left: 5vw;
+    }
+    #redessociais {
+        top: 484px;
+        left: 25vw;
+        padding: 12px 0px 8px 12px;
+    }
+    #primeirasecao h1 {
+        font-size: 1.4rem;
+    }
+    #linha {
+        padding: 0;
+    }
+    .input.active img {
+        right: 0.6rem;
+    }
+    .input-flex-container {
+        margin-top: unset;
+    }
+    .input {
+        margin: 106px 8px 0px;
+    }
+    .description-flex-container {
+        margin: 3rem 0 0 0;
+        text-align: initial;
+        font-size: 1rem;
+    }
+    .card {
+        margin: 1rem 0rem;
+        width: 80vw;
+    }
+    .skills {
+        justify-content: center;
+        align-items: center;
+    }
+    footer .skills p {
+        width: 80vw;
+    }
+    footer .contatos  {
+        margin: 3rem 0;
+    }
+}
+@media (max-width: 375px) {
+    #home h1 {
+        font-size: 1.3rem;
+    }
+    #home h2 {
+        font-size: 1.1rem;
+    }
+    #redessociais {
+        left: 20vw;
+    }
+    main #home i {
+        font-size: 2rem;
+    }
+    .input {
+        width: 50px;
+        height: 50px;
+    }
+    footer .skills p {
+        font-size: 1.3rem;
+        margin: 0.2rem;
+    }
+    .hardskills i, .softskills i {
+        font-size: 2rem;
+    }
+    .presente img {
+        height: 8rem;
+    }
+    .presente p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 329px) {
+    .input {
+        width: 40px;
+        height: 40px;
+    }
+    #primeirasecao h1 {
+        font-size: 1.1rem;
+    }
+    .input span::after {
+        font-size: 0.8rem;
+    }
+    .input.active img {
+        right: 1.3rem;
+    }
+    #contatos h3 {
+        font-size: 0.8rem;
+    }
+}
