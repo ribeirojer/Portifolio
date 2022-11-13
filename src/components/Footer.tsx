@@ -1,6 +1,94 @@
 import React from 'react'
+import styled from 'styled-components';
 
 type Props = {}
+
+const Wrapper = styled.header`
+    footer {
+        background-color: var(--segunda-bg);
+        color: var(--home-color);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills div {
+        display: flex;
+        justify-content: center;
+    }
+    footer .skills p {
+        display: flex;
+        justify-content: center;
+        margin: 0.8rem 0;
+        font-size: 1.5rem;
+    }
+    .hardskills i {
+        margin: 0 0.4rem;
+        font-size: 3rem;
+    }
+    .softskills i {
+        margin: 0 0.8rem;
+        font-size: 2rem;
+    }
+    .skills i:hover {
+        color: var(--home-foto-hover);
+    }
+    .contatos {
+        margin: 0 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contatos img {
+        height: 7rem;
+    }
+    .contatos div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contatos h2 {
+        color: #f0f0f0;
+        text-shadow: 1px 1px #594E36;
+        margin: 1rem 0 0.2rem 0;
+    }
+    .contatos p {
+        margin: 0.5rem 0 0.2rem 0;
+        font-weight: bold;
+    }
+    .contatos i {
+        margin: 0 0.4rem;
+        font-size: 3rem;
+        color: var(--home-color);
+    }
+    .contatos i:hover {
+        color: var(--home-foto-hover);
+    }
+    .presente {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .presente1, .presente2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .presente1 {
+        margin-bottom: 1rem;
+    }
+    .presente img {
+        height: 10rem;
+        animation: spin 10s infinite linear;
+    }
+    .presente p {
+        font-weight: 500;
+    }
+    .presente p:nth-child(4) {
+        margin: 0.8rem 0 0 0;
+        font-weight: bold;
+    }
+`;
 
 const Footer = (props: Props) => {
   return (
