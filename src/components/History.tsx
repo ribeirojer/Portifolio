@@ -12,14 +12,13 @@ type Props = {}
 
 const Wrapper = styled.header`
     height: 100vh;
-    color: ${props => props.theme ? "yellow" : "blue"};//var(--home-color);
-    background-color: ${props => props.theme ? "grey" : "green"};//var(--segunda-bg);
-
+    color: ${props => props.theme.mainTextColor};
+    background-color: ${props => props.theme.secondaryBg};
     h1 {
         display: flex;
         justify-content: center;
         font-size: 2rem;
-        padding: 2rem 0 1rem 0;
+        padding: 3rem 0 1rem 0;
     }
     .flex-parent {
         margin: 7rem 0;
@@ -135,9 +134,9 @@ const Wrapper = styled.header`
     }
 `;
 
-const History = (props: Props) => {
+const History = ({theme}: any) => {
     return (
-        <Wrapper>
+        <Wrapper theme={theme}>
             <h1>Linha do tempo da minha vida</h1>
             <div className="flex-parent">
                 <div className="input-flex-container">

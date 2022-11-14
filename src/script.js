@@ -1,15 +1,3 @@
-$(function(){
-	var inputs = $('.input');
-	var paras = $('.description-flex-container').find('p');
-	inputs.click(function(){
-		var t = $(this),
-				ind = t.index(),
-				matchedPara = paras.eq(ind);
-		
-		t.add(matchedPara).addClass('active');
-		inputs.not(t).add(paras.not(matchedPara)).removeClass('active');
-	});
-});
 
 $(function() {
     $(window).on("scroll", function() {
@@ -36,29 +24,3 @@ $(function() {
         }
     });
 });
-
-function selecionaCard(id) {
-    const card = document.getElementById("card-okay");
-    const card2 = document.getElementById("card-wissen");
-    const card3 = document.getElementById("card-fezoque");
-              
-    if(id==="btn-1") {
-        card.classList.remove("displayNone");
-        card2.classList.add("displayNone");
-        card3.classList.add("displayNone");
-        console.log(card);
-    }
-    if(id==="btn-2") {
-        card.classList.add("displayNone");
-        card2.classList.remove("displayNone");
-        card3.classList.add("displayNone");
-        console.log(card);
-    }
-    if(id==="btn-3") {
-        card.classList.add("displayNone");
-        card2.classList.add("displayNone");
-        card3.classList.remove("displayNone");
-        console.log(card);
-    }
-
-}

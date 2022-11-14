@@ -1,11 +1,12 @@
-import React from 'react'
+import Imagem01 from "../assets/man5.png"
+import Imagem02 from "../assets/tttwinkle.svg"
 import styled from 'styled-components';
 
 type Props = {}
 
 const Wrapper = styled.footer`
-    background-color: var(--segunda-bg);
-    color: var(--home-color);
+    color: ${props => props.theme.mainTextColor};
+    background-color: ${props => props.theme.secondaryBg};
     height: 100vh;
     display: flex;
     align-items: center;
@@ -20,6 +21,9 @@ const Wrapper = styled.footer`
         margin: 0.8rem 0;
         font-size: 1.5rem;
     }
+    .skills i:hover {
+        color: ${props => props.theme.homefoto};
+    }
     .hardskills i {
         margin: 0 0.4rem;
         font-size: 3rem;
@@ -27,9 +31,6 @@ const Wrapper = styled.footer`
     .softskills i {
         margin: 0 0.8rem;
         font-size: 2rem;
-    }
-    .skills i:hover {
-        color: var(--home-foto-hover);
     }
     .contatos {
         margin: 0 4rem;
@@ -57,7 +58,7 @@ const Wrapper = styled.footer`
     .contatos i {
         margin: 0 0.4rem;
         font-size: 3rem;
-        color: var(--home-color);
+        color: ${props => props.theme.mainTextColor};
     }
     .contatos i:hover {
         color: var(--home-foto-hover);
@@ -86,11 +87,14 @@ const Wrapper = styled.footer`
         margin: 0.8rem 0 0 0;
         font-weight: bold;
     }
+    .presente a {
+        color: ${props => props.theme.mainTextColor};
+    }
 `;
 
-const Footer = (props: Props) => {
+const Footer = ({theme}: any) => {
   return (
-    <Wrapper id="footer">
+    <Wrapper id="footer" theme={theme}>
         <div className="skills">
             <p>Hard Skills:</p>
             <div className="hardskills">
@@ -112,7 +116,7 @@ const Footer = (props: Props) => {
             </div>
         </div>
         <div className="contatos">
-            <img src="assets/man5.png" alt="civil de oculos"/>
+            <img src={Imagem01} alt="civil de oculos"/>
             <div>
                 <h2>Eduardo Ribeiro</h2>
                 <h3>Desenvolvedor Front-end</h3>
@@ -126,7 +130,7 @@ const Footer = (props: Props) => {
         </div>
         <div className="presente">
             <div className="presente1">
-                <img src="assets/tttwinkle.svg" alt="espiral girando"/>
+                <img src={Imagem02} alt="espiral girando"/>
                 <p>Veja essa animação como presente 🙌</p>
                 <p>Obrigado pela visita!</p>
             </div>
@@ -137,7 +141,7 @@ const Footer = (props: Props) => {
                     <a href="https://fffuel.co/" target="_blank">fffuel</a>.
                 </p>
                 <p>Ícones:
-                    <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> e 
+                    <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> e  
                     <a href="https://boxicons.com/" target="_blank">Boxicons</a>.
                 </p>
             </div>

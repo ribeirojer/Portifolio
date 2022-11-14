@@ -12,6 +12,8 @@ const Wrapper = styled.section`
   color: ${props => props.theme.mainTextColor};
   background: url(${background});
   background-color: ${props => props.theme.mainBg};
+  background-size: cover;
+  background-attachment: fixed;
   h1 {
     font-family: 'Poppins';
     font-size: 4rem;

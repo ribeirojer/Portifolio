@@ -13,10 +13,10 @@ function App() {
       mainTextColor: '#2F2504',
       homefoto: '#75de04',
       iconsHover: '#F2A359',
-      segundabg: '#7E846B',
+      secondaryBg: '#7E846B',
       dark: false,
     });
-    
+
     function chageTheme() {
       if(theme.dark){
         setTheme({
@@ -25,7 +25,7 @@ function App() {
           mainTextColor: '#2F2504',
           homefoto: '#75de04',
           iconsHover: '#F2A359',
-          segundabg: '#7E846B',
+          secondaryBg: '#7E846B',
           dark: false,
         })
       } else {
@@ -35,7 +35,7 @@ function App() {
           mainTextColor: '#F2A359',
           homefoto: '#75de04',
           iconsHover: '#ffffff',
-          segundabg: '#7E846B',
+          secondaryBg: '#2F2504',
           dark: true,
         })
       }
@@ -45,9 +45,9 @@ function App() {
       <div className="App">
         <Header theme={theme} change={chageTheme}/>
         <Home theme={theme} />
-        <History/>
-        <Projects/>
-        <Footer/>
+        <History theme={theme} />
+        <Projects theme={theme} />
+        <Footer theme={theme} />
       </div>
     )
 }
